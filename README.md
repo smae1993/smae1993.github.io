@@ -1,18 +1,18 @@
 # Amin Portfolio
 
-پورتفولیوی شخصی سید محمد امین عمرانی، بازطراحی‌شده از صفر با Astro.
+پورتفولیوی شخصی سید محمد امین عمرانی که از صفر با Astro 7 بازطراحی شده است.
 
-## ویژگی‌ها
+## قابلیت‌ها
 
 - طراحی اختصاصی Dark/Light با ظاهر مهندسی و محصول‌محور
 - نسخه فارسی RTL و نسخه انگلیسی در مسیر `/en/`
-- بدون فریم‌ورک JavaScript سمت کلاینت
-- انیمیشن‌های سبک با رعایت `prefers-reduced-motion`
+- جاوااسکریپت سمت کلاینت کم و بدون فریم‌ورک رابط کاربری
+- انیمیشن‌های سبک با پشتیبانی از `prefers-reduced-motion`
 - Command Palette با `Ctrl/⌘ + K`
-- SEO کامل، Open Graph، JSON-LD، sitemap و robots.txt
-- Responsive برای موبایل، تبلت و دسکتاپ
-- انتشار خودکار در GitHub Pages
-- محتوای پروژه‌ها و مهارت‌ها به‌صورت متمرکز و قابل‌ویرایش
+- SEO، Open Graph، JSON-LD، sitemap و robots.txt
+- طراحی Responsive برای موبایل، تبلت و دسکتاپ
+- انتشار خودکار روی GitHub Pages
+- محتوای متمرکز و قابل‌ویرایش برای پروژه‌ها و مهارت‌ها
 
 ## شروع سریع
 
@@ -48,7 +48,7 @@ src/
 
 ## تکنولوژی
 
-- Astro 6
+- Astro 7
 - TypeScript
 - CSS خالص
 - GitHub Actions / GitHub Pages
