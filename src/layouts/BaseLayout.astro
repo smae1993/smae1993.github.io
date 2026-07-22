@@ -13,6 +13,18 @@ interface Props {
 
 const { lang, dir, title, description, canonical, alternate } = Astro.props;
 const isFa = lang === 'fa';
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Sayed Mohammad Amin Emrani',
+  alternateName: 'سید محمد امین عمرانی',
+  url: 'https://smae1993.github.io',
+  image: 'https://avatars.githubusercontent.com/u/20657643?v=4',
+  email: 'mailto:smae1993@gmail.com',
+  jobTitle: 'Full-stack Software Engineer',
+  knowsAbout: ['Go', 'Flutter', 'Next.js', 'Astro', 'DevOps', 'IoT', 'System Design'],
+  sameAs: ['https://github.com/smae1993'],
+};
 ---
 <!doctype html>
 <html lang={lang} dir={dir} data-theme="dark">
@@ -40,18 +52,7 @@ const isFa = lang === 'fa';
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://smae1993.github.io/og.svg" />
     <title>{title}</title>
-    <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: 'Sayed Mohammad Amin Emrani',
-      alternateName: 'سید محمد امین عمرانی',
-      url: 'https://smae1993.github.io',
-      image: 'https://avatars.githubusercontent.com/u/20657643?v=4',
-      email: 'mailto:smae1993@gmail.com',
-      jobTitle: 'Full-stack Software Engineer',
-      knowsAbout: ['Go', 'Flutter', 'Next.js', 'Astro', 'DevOps', 'IoT', 'System Design'],
-      sameAs: ['https://github.com/smae1993'],
-    })} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
   </head>
   <body>
     <a class="skip-link" href="#main">{isFa ? 'رفتن به محتوای اصلی' : 'Skip to content'}</a>
