@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/overrides.css';
 import type { Locale } from '../data/portfolio';
 
 interface Props {
@@ -19,11 +20,16 @@ const structuredData = {
   name: 'Sayed Mohammad Amin Emrani',
   alternateName: 'سید محمد امین عمرانی',
   url: 'https://smae1993.github.io',
-  image: 'https://avatars.githubusercontent.com/u/20657643?v=4',
+  image: 'https://smae1993.github.io/amin-logo.svg',
   email: 'mailto:smae1993@gmail.com',
   jobTitle: 'Full-stack Software Engineer',
   knowsAbout: ['Go', 'Flutter', 'Next.js', 'Astro', 'DevOps', 'IoT', 'System Design'],
-  sameAs: ['https://github.com/smae1993'],
+  sameAs: [
+    'https://github.com/smae1993',
+    'https://www.linkedin.com/in/smae1993/',
+    'https://t.me/smae1993',
+    'https://www.instagram.com/smae1993/',
+  ],
 };
 ---
 <!doctype html>
@@ -33,7 +39,7 @@ const structuredData = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="author" content="Sayed Mohammad Amin Emrani" />
-    <meta name="theme-color" content="#09090b" />
+    <meta name="theme-color" content="#173e64" />
     <meta name="color-scheme" content="dark light" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href={canonical} />
