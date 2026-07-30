@@ -5,7 +5,10 @@
 ## قابلیت‌ها
 
 - طراحی اختصاصی Dark/Light با ظاهر مهندسی و محصول‌محور
-- نسخه فارسی RTL و نسخه انگلیسی در مسیر `/en/`
+- زبان پیش‌فرض انگلیسی در مسیر `/`
+- نسخه فارسی RTL در مسیر `/fa/`
+- بخش Start a Project / ثبت سفارش با ایمیل، لینکدین، تلگرام، اینستاگرام و GitHub
+- لوگو و آیکن شخصی در هدر، فوتر، مرورگر و Manifest
 - جاوااسکریپت سمت کلاینت کم و بدون فریم‌ورک رابط کاربری
 - انیمیشن‌های سبک با پشتیبانی از `prefers-reduced-motion`
 - Command Palette با `Ctrl/⌘ + K`
@@ -39,12 +42,19 @@ src/
 ├── layouts/BaseLayout.astro
 ├── pages/
 │   ├── index.astro
+│   ├── fa/index.astro
 │   ├── en/index.astro
 │   └── 404.astro
-└── styles/global.css
+└── styles/
+    ├── global.css
+    └── overrides.css
 ```
 
 راهنمای کامل اجرا و انتشار در [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) قرار دارد.
+
+## ویرایش محتوا
+
+متن‌ها، پروژه‌ها و اطلاعات تماس در `src/data/portfolio.ts` نگهداری می‌شوند. لوگوی اصلی نیز در `public/amin-logo.svg` قرار دارد.
 
 ## تکنولوژی
 
