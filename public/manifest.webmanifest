@@ -5,6 +5,6 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#08080b",
-  "theme_color": "#08080b",
-  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+  "theme_color": "#173e64",
+  "icons": [{ "src": "/amin-logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
 }
