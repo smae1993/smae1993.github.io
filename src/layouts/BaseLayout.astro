@@ -66,5 +66,10 @@ const structuredData = {
     <div class="ambient ambient-one" aria-hidden="true"></div>
     <div class="ambient ambient-two" aria-hidden="true"></div>
     <slot />
+    <script is:inline>
+      document.querySelectorAll('.brand-text, .footer-brand strong').forEach((element) => {
+        element.textContent = 'smae1993';
+      });
+    </script>
   </body>
 </html>
