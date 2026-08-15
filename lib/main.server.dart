@@ -5,7 +5,7 @@ import 'main.server.options.dart';
 import 'site.dart';
 
 void main() {
-  Jaspr.initializeAll(options: defaultServerOptions);
+  Jaspr.initializeApp(options: defaultServerOptions);
 
   runApp(
     Document(
