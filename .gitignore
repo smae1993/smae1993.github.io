@@ -1,8 +1,6 @@
-node_modules/
-dist/
-.astro/
+.dart_tool/
+.jaspr/
+build/
+*.server.options.dart
+*.client.options.dart
 .DS_Store
-*.log
-.env
-.env.*
-!.env.example

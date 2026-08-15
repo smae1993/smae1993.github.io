@@ -1,0 +1,14 @@
+name: smae1993_portfolio
+description: Personal bilingual portfolio built with Jaspr and Dart.
+version: 2.0.0
+publish_to: none
+
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+
+dependencies:
+  jaspr: ^0.23.2
+  jaspr_router: ^0.8.3
+
+jaspr:
+  mode: static

@@ -1,4 +1,4 @@
-name: Deploy Astro to GitHub Pages
+name: Deploy Jaspr to GitHub Pages
 
 on:
   push:
@@ -17,17 +17,34 @@ concurrency:
 
 jobs:
   build:
-    name: Build
+    name: Build Jaspr
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Install, build, and upload Astro
-        uses: withastro/action@v6
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
         with:
-          node-version: 22.12.0
-          package-manager: npm@latest
+          sdk: stable
+
+      - name: Install dependencies
+        run: |
+          dart pub get
+          dart pub global activate jaspr_cli 0.23.2
+
+      - name: Build static site
+        run: |
+          dart pub global run jaspr_cli:jaspr build --sitemap-domain https://smae1993.github.io
+          touch build/jaspr/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/jaspr
 
   deploy:
     name: Deploy

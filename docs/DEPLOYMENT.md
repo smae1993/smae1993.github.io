@@ -2,50 +2,42 @@
 
 ## پیش‌نیاز
 
-- Node.js نسخه `22.12.0` یا جدیدتر
-- npm
+- Dart SDK 3.8 یا جدیدتر
 - Git
-
-نسخه درست Node در فایل `.nvmrc` مشخص شده است. اگر `nvm` دارید:
-
-```bash
-nvm install
-nvm use
-```
+- Jaspr CLI 0.23.2
 
 ## اجرای محلی
 
 ```bash
 git clone https://github.com/smae1993/smae1993.github.io.git
 cd smae1993.github.io
-npm install
-npm run dev
+dart pub get
+dart pub global activate jaspr_cli 0.23.2
+dart pub global run jaspr_cli:jaspr serve
 ```
-
-سایت به‌صورت پیش‌فرض روی `http://localhost:4321` اجرا می‌شود.
 
 ## ساخت نسخه Production
 
 ```bash
-npm run build
-npm run preview
+dart pub global run jaspr_cli:jaspr build --sitemap-domain https://smae1993.github.io
 ```
 
-خروجی نهایی داخل پوشه `dist/` ساخته می‌شود.
+خروجی نهایی داخل `build/jaspr/` ساخته می‌شود. پروژه در حالت `static` است و مسیرهای `/` و `/fa/` هنگام build پیش‌رندر می‌شوند.
 
 ## انتشار خودکار در GitHub Pages
 
 Workflow موجود در `.github/workflows/deploy.yml` با هر Push روی شاخه `main` این مراحل را انجام می‌دهد:
 
 1. دریافت سورس
-2. نصب وابستگی‌ها و Build با Action رسمی Astro
-3. انتشار خروجی روی GitHub Pages
+2. نصب Dart و وابستگی‌های پروژه
+3. نصب Jaspr CLI
+4. اجرای build استاتیک Jaspr
+5. آپلود `build/jaspr/` به GitHub Pages
+6. انتشار سایت
 
-در تنظیمات ریپو مسیر زیر را باز کنید:
+در تنظیمات ریپو مسیر زیر باید روی GitHub Actions باشد:
 
-`Settings → Pages → Build and deployment → Source`
-
-مقدار Source باید روی **GitHub Actions** باشد. بعد از Push، وضعیت انتشار در تب **Actions** قابل مشاهده است.
+`Settings → Pages → Build and deployment → Source → GitHub Actions`
 
 آدرس نهایی:
 
@@ -53,28 +45,16 @@ Workflow موجود در `.github/workflows/deploy.yml` با هر Push روی ش
 
 ## تغییر محتوا
 
-تمام متن‌های فارسی و انگلیسی در فایل زیر هستند:
-
-`src/data/portfolio.ts`
-
-- شیء `fa` برای نسخه فارسی
-- شیء `en` برای نسخه انگلیسی
-
-برای اضافه‌کردن پروژه، یک آیتم جدید به `projects.items` اضافه کنید.
+متن‌های فارسی و انگلیسی، پروژه‌ها، Toolkit و اطلاعات تماس در `lib/site_data.dart` هستند.
 
 ## تغییر ظاهر
 
-استایل اصلی در فایل زیر است:
-
-`src/styles/global.css`
-
-متغیرهای رنگ، پس‌زمینه، سطح‌ها و اندازه کانتینر در ابتدای فایل تعریف شده‌اند.
+استایل اصلی در `web/styles/global.css` و اصلاحات تکمیلی در `web/styles/overrides.css` قرار دارد. برای حفظ طراحی فعلی، ابتدا از tokenها و کلاس‌های موجود استفاده کنید.
 
 ## دامنه اختصاصی
 
 برای دامنه اختصاصی:
 
-1. فایل `public/CNAME` را با دامنه خود بسازید.
-2. مقدار `site` در `astro.config.mjs` را تغییر دهید.
-3. canonicalها و sitemap را با دامنه جدید هماهنگ کنید.
-4. DNS را طبق راهنمای GitHub Pages تنظیم کنید.
+1. فایل `web/CNAME` را با دامنه موردنظر بسازید.
+2. canonicalها و آدرس sitemap در تنظیمات build را هماهنگ کنید.
+3. DNS را طبق راهنمای GitHub Pages تنظیم کنید.
