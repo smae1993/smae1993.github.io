@@ -1,0 +1,115 @@
+/* Hero contribution heatmap refinements.
+   Keep the GitHub-inspired grid compact, square, and intentionally non-uniform. */
+
+.code-map {
+  height: 132px;
+  padding: 10px 14px 8px;
+  overflow: hidden;
+}
+
+.contribution-head,
+.contribution-legend {
+  width: 100%;
+  max-width: 285px;
+  margin-inline: auto;
+}
+
+.contribution-grid {
+  --heat-cell: 9px;
+  --heat-gap: 3px;
+  display: grid;
+  grid-template-rows: repeat(7, var(--heat-cell));
+  grid-auto-flow: column;
+  grid-auto-columns: var(--heat-cell);
+  gap: var(--heat-gap);
+  width: max-content;
+  max-width: 100%;
+  height: auto;
+  margin: 8px auto 7px;
+  align-content: center;
+  justify-content: center;
+}
+
+.code-map .contribution-cell {
+  width: var(--heat-cell);
+  height: var(--heat-cell);
+  min-width: var(--heat-cell);
+  min-height: var(--heat-cell);
+  aspect-ratio: 1;
+  border-radius: 2px;
+}
+
+/* The grid is laid out Sunday -> Saturday in each week-column.
+   Friday is intentionally inactive. */
+.contribution-grid .contribution-cell:nth-child(7n + 6) {
+  background: var(--heat-0);
+}
+
+/* A few deterministic non-Friday rest / low-activity days make the rhythm
+   feel more like real work instead of a generated repeating pattern. */
+.contribution-grid .contribution-cell:nth-child(3),
+.contribution-grid .contribution-cell:nth-child(17),
+.contribution-grid .contribution-cell:nth-child(30),
+.contribution-grid .contribution-cell:nth-child(43),
+.contribution-grid .contribution-cell:nth-child(55),
+.contribution-grid .contribution-cell:nth-child(72),
+.contribution-grid .contribution-cell:nth-child(87),
+.contribution-grid .contribution-cell:nth-child(101),
+.contribution-grid .contribution-cell:nth-child(121),
+.contribution-grid .contribution-cell:nth-child(137),
+.contribution-grid .contribution-cell:nth-child(153),
+.contribution-grid .contribution-cell:nth-child(160) {
+  background: var(--heat-0);
+}
+
+/* Break up the remaining generated levels with a few quieter and busier days. */
+.contribution-grid .contribution-cell:nth-child(11),
+.contribution-grid .contribution-cell:nth-child(28),
+.contribution-grid .contribution-cell:nth-child(47),
+.contribution-grid .contribution-cell:nth-child(69),
+.contribution-grid .contribution-cell:nth-child(93),
+.contribution-grid .contribution-cell:nth-child(118),
+.contribution-grid .contribution-cell:nth-child(142) {
+  background: var(--heat-1);
+}
+
+.contribution-grid .contribution-cell:nth-child(8),
+.contribution-grid .contribution-cell:nth-child(25),
+.contribution-grid .contribution-cell:nth-child(39),
+.contribution-grid .contribution-cell:nth-child(60),
+.contribution-grid .contribution-cell:nth-child(75),
+.contribution-grid .contribution-cell:nth-child(98),
+.contribution-grid .contribution-cell:nth-child(114),
+.contribution-grid .contribution-cell:nth-child(132),
+.contribution-grid .contribution-cell:nth-child(149),
+.contribution-grid .contribution-cell:nth-child(164) {
+  background: var(--heat-4);
+}
+
+.contribution-legend {
+  gap: 4px;
+}
+
+.contribution-legend i {
+  width: 8px;
+  height: 8px;
+  aspect-ratio: 1;
+  border-radius: 2px;
+}
+
+@media (max-width: 720px) {
+  .code-map {
+    padding-inline: 12px;
+  }
+
+  .contribution-head,
+  .contribution-legend {
+    max-width: 238px;
+  }
+
+  .contribution-grid {
+    --heat-cell: 8px;
+    --heat-gap: 2px;
+    margin-block: 8px 7px;
+  }
+}
