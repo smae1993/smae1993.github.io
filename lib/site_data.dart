@@ -185,21 +185,25 @@ const stackGroups = <StackGroup>[
 ];
 
 const faProjects = <Project>[
-  Project(name: 'Homa', kicker: 'Accounting Platform', description: 'پلتفرم حسابداری چندسازمانی با مدیریت حساب‌ها، تراکنش‌ها، فاکتور، انبار، شعب، سطوح دسترسی و همگام‌سازی بین موبایل و وب.', stack: ['Go', 'Next.js', 'Flutter', 'MySQL', 'Docker'], accent: '#7c3aed', status: 'در حال توسعه', featured: true),
-  Project(name: 'Kasbfa', kicker: 'Multi-tenant Commerce', description: 'فروشگاه‌ساز SaaS برای کسب‌وکارهای تخصصی با معماری چندمستاجری، تم‌های قابل‌توسعه، مدیریت دامنه و تجربه خرید بهینه.', stack: ['Go', 'Next.js', 'Flutter', 'Multi-tenant', 'S3'], accent: '#10b981', status: 'محصول SaaS', featured: true),
-  Project(name: 'Moadify', kicker: 'Tax Automation', description: 'نرم‌افزار واسط سامانه مودیان با پردازش فاکتور، OCR، کنترل خطاها و گردش کار مناسب مشاوران و شرکت‌های مالی.', stack: ['Flutter', 'Backend API', 'OCR', 'Tax Tech'], accent: '#f59e0b', status: 'فین‌تک'),
-  Project(name: 'Taskuk', kicker: 'Task & Calendar', description: 'ابزار مدیریت کار و تقویم با تمرکز بر وضوح، سرعت و تجربه یکپارچه دسکتاپ و موبایل.', stack: ['Flutter', 'Go', 'Productivity', 'Cross-platform'], accent: '#6366f1', status: 'چندسکویی'),
-  Project(name: 'Divan', kicker: 'CRM & Projects', description: 'سیستم مدیریت ارتباط با مشتری و پروژه برای تیم‌های کوچک؛ از سرنخ و فروش تا فعالیت‌ها، پروژه‌ها و گزارش مدیریتی.', stack: ['CRM', 'Project Management', 'Next.js', 'API'], accent: '#0ea5e9', status: 'B2B SaaS'),
-  Project(name: 'Kelec', kicker: 'IoT Ecosystem', description: 'اکوسیستم قابل‌اعتماد برای کنترل تجهیزات مبتنی بر ESP32 و ESP8266 با MQTT، اپ موبایل و مدیریت دستگاه.', stack: ['ESP32', 'ESP8266', 'MQTT', 'Flutter', 'Go'], accent: '#22c55e', status: 'IoT'),
+  Project(name: 'آسان دارو', kicker: 'وب‌سایت آنلاین', description: 'نسخه عمومی آسان دارو برای مشاهده مستقیم پروژه و تجربه کاربری آن.', stack: ['asandaroo.com'], accent: '#14b8a6', status: 'آنلاین', href: 'https://asandaroo.com'),
+  Project(name: 'نیوالکترون', kicker: 'وب‌سایت آنلاین', description: 'نسخه عمومی نیوالکترون برای مشاهده مستقیم پروژه و تجربه کاربری آن.', stack: ['newelectron.ir'], accent: '#06b6d4', status: 'آنلاین', href: 'https://newelectron.ir'),
+  Project(name: 'کارمانیا', kicker: 'اکوسیستم نرم‌افزاری', description: 'اکوسیستم نرم‌افزاری کارمانیا برای دیجیتال‌سازی و مدیریت یکپارچه فرایندهای کسب‌وکار.', stack: ['Jaspr', 'Flutter', 'Dart', 'Go'], accent: '#8b5cf6', status: 'محصول', href: 'https://karmania.net'),
+  Project(name: 'هما', kicker: 'Accounting Platform', description: 'پلتفرم حسابداری چندسازمانی با مدیریت حساب‌ها، تراکنش‌ها، فاکتور، انبار، شعب، سطوح دسترسی و همگام‌سازی بین موبایل و وب.', stack: ['Go', 'Next.js', 'Flutter', 'MySQL', 'Docker'], accent: '#7c3aed', status: 'در حال توسعه', featured: true),
+  Project(name: 'کسب‌فا', kicker: 'Multi-tenant Commerce', description: 'فروشگاه‌ساز SaaS برای کسب‌وکارهای تخصصی با معماری چندمستاجری، تم‌های قابل‌توسعه، مدیریت دامنه و تجربه خرید بهینه.', stack: ['Go', 'Next.js', 'Flutter', 'Multi-tenant', 'S3'], accent: '#10b981', status: 'محصول SaaS', featured: true),
+  Project(name: 'مودیفای', kicker: 'Tax Automation', description: 'نرم‌افزار واسط سامانه مودیان با پردازش فاکتور، OCR، کنترل خطاها و گردش کار مناسب مشاوران و شرکت‌های مالی.', stack: ['Flutter', 'Backend API', 'OCR', 'Tax Tech'], accent: '#f59e0b', status: 'فین‌تک'),
+  Project(name: 'تسکوک', kicker: 'Task & Calendar', description: 'ابزار مدیریت کار و تقویم با تمرکز بر وضوح، سرعت و تجربه یکپارچه دسکتاپ و موبایل.', stack: ['Flutter', 'Go', 'Productivity', 'Cross-platform'], accent: '#6366f1', status: 'چندسکویی'),
+  Project(name: 'دیوان', kicker: 'CRM & Projects', description: 'سیستم مدیریت ارتباط با مشتری و پروژه برای تیم‌های کوچک؛ از سرنخ و فروش تا فعالیت‌ها، پروژه‌ها و گزارش مدیریتی.', stack: ['CRM', 'Project Management', 'Next.js', 'API'], accent: '#0ea5e9', status: 'B2B SaaS'),
 ];
 
 const enProjects = <Project>[
+  Project(name: 'Asan Daroo', kicker: 'Live Website', description: 'The public Asan Daroo website, available to review the live project and its user experience.', stack: ['asandaroo.com'], accent: '#14b8a6', status: 'Live', href: 'https://asandaroo.com'),
+  Project(name: 'NewElectron', kicker: 'Live Website', description: 'The public NewElectron website, available to review the live project and its user experience.', stack: ['newelectron.ir'], accent: '#06b6d4', status: 'Live', href: 'https://newelectron.ir'),
+  Project(name: 'Karmania', kicker: 'Business Software Ecosystem', description: 'A software ecosystem for digitizing and managing business workflows across connected products.', stack: ['Jaspr', 'Flutter', 'Dart', 'Go'], accent: '#8b5cf6', status: 'Product', href: 'https://karmania.net'),
   Project(name: 'Homa', kicker: 'Accounting Platform', description: 'A multi-organization accounting platform covering accounts, transactions, invoicing, inventory, branches, permissions, and web/mobile synchronization.', stack: ['Go', 'Next.js', 'Flutter', 'MySQL', 'Docker'], accent: '#7c3aed', status: 'In development', featured: true),
   Project(name: 'Kasbfa', kicker: 'Multi-tenant Commerce', description: 'A SaaS store builder for specialist businesses with multi-tenant architecture, extensible themes, domain management, and optimized storefronts.', stack: ['Go', 'Next.js', 'Flutter', 'Multi-tenant', 'S3'], accent: '#10b981', status: 'SaaS product', featured: true),
   Project(name: 'Moadify', kicker: 'Tax Automation', description: 'Tax intermediary software with invoice processing, OCR, validation, and workflows for financial consultants and companies.', stack: ['Flutter', 'Backend API', 'OCR', 'Tax Tech'], accent: '#f59e0b', status: 'Fintech'),
   Project(name: 'Taskuk', kicker: 'Task & Calendar', description: 'A focused task and calendar tool designed for clarity, speed, and a consistent desktop and mobile experience.', stack: ['Flutter', 'Go', 'Productivity', 'Cross-platform'], accent: '#6366f1', status: 'Cross-platform'),
   Project(name: 'Divan', kicker: 'CRM & Projects', description: 'A CRM and project management system for small teams, covering leads, sales, activities, projects, and reporting.', stack: ['CRM', 'Project Management', 'Next.js', 'API'], accent: '#0ea5e9', status: 'B2B SaaS'),
-  Project(name: 'Kelec', kicker: 'IoT Ecosystem', description: 'A dependable ecosystem for ESP32/ESP8266 devices with MQTT, mobile control, and device management.', stack: ['ESP32', 'ESP8266', 'MQTT', 'Flutter', 'Go'], accent: '#22c55e', status: 'IoT'),
 ];
 
 const reposFa = <RepoItem>[
@@ -235,7 +239,7 @@ const channelsEn = <ContactChannel>[
 const fa = PortfolioCopy(
   locale: 'fa',
   dir: 'rtl',
-  languageName: 'EN',
+  languageName: 'فا',
   alternateHref: '/',
   title: 'سید محمد امین عمرانی | مهندس نرم‌افزار فول‌استک',
   description: 'پورتفولیوی سید محمد امین عمرانی؛ مهندس نرم‌افزار فول‌استک و توسعه‌دهنده Flutter، Jaspr، Dart و Go با تمرکز بر محصولات SaaS، DevOps و IoT.',
@@ -290,7 +294,7 @@ const fa = PortfolioCopy(
 const en = PortfolioCopy(
   locale: 'en',
   dir: 'ltr',
-  languageName: 'FA',
+  languageName: 'EN',
   alternateHref: '/fa/',
   title: 'Sayed Mohammad Amin Emrani | Full-stack Software Engineer',
   description: 'Portfolio of Sayed Mohammad Amin Emrani, a full-stack engineer building Flutter, Jaspr, Dart, Go, SaaS, DevOps, and IoT products.',
