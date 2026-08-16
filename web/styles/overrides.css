@@ -175,6 +175,238 @@ html[dir='rtl'] .contact-channel:hover .contact-channel-arrow {
   margin-top: 4px;
 }
 
+/* Header controls use lightweight Lucide-compatible SVG paths without an icon runtime. */
+.language-menu {
+  position: relative;
+}
+
+.language-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 38px;
+  min-width: 76px;
+  padding: 0 9px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--surface);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition: color .2s, border-color .2s, background .2s;
+}
+
+.language-trigger:hover,
+.language-menu.open .language-trigger {
+  color: var(--text);
+  border-color: var(--line-strong);
+  background: var(--surface-hover);
+}
+
+.language-trigger > svg:first-child {
+  width: 16px;
+  height: 16px;
+}
+
+.language-chevron {
+  width: 13px;
+  height: 13px;
+  transition: transform .2s ease;
+}
+
+.language-menu.open .language-chevron {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  z-index: 80;
+  inset-block-start: calc(100% + 9px);
+  inset-inline-end: 0;
+  width: 176px;
+  padding: 6px;
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--surface-solid) 94%, transparent);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .28);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px) scale(.98);
+  transform-origin: top right;
+  backdrop-filter: blur(18px) saturate(150%);
+  transition: opacity .16s ease, transform .16s ease, visibility .16s;
+}
+
+html[dir='rtl'] .language-dropdown {
+  transform-origin: top left;
+}
+
+.language-menu.open .language-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.language-dropdown button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text);
+  text-align: start;
+  cursor: pointer;
+}
+
+.language-dropdown button:hover {
+  background: var(--surface-hover);
+}
+
+.language-dropdown button > span {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+.language-dropdown b {
+  min-width: 23px;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+}
+
+.language-dropdown small {
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+.language-check {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-2);
+}
+
+.command-button {
+  width: 38px;
+  min-width: 38px;
+  padding: 0;
+}
+
+.command-button svg,
+.theme-toggle svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.8;
+}
+
+/* GitHub-style contribution tiles inside the hero terminal. */
+.code-map {
+  --heat-0: #161b22;
+  --heat-1: #0e4429;
+  --heat-2: #006d32;
+  --heat-3: #26a641;
+  --heat-4: #39d353;
+  height: 132px;
+  padding: 10px 12px 9px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--surface-solid) 84%, black 16%);
+}
+
+html[data-theme='light'] .code-map {
+  --heat-0: #ebedf0;
+  --heat-1: #9be9a8;
+  --heat-2: #40c463;
+  --heat-3: #30a14e;
+  --heat-4: #216e39;
+  background: rgba(255, 255, 255, .66);
+}
+
+.code-map::before,
+.code-map::after {
+  display: none;
+}
+
+.contribution-head,
+.contribution-legend {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted-2);
+  direction: ltr;
+  font-family: var(--font-mono);
+  font-size: .52rem;
+  line-height: 1;
+}
+
+.code-map .contribution-head span,
+.code-map .contribution-legend span {
+  position: static;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  opacity: 1;
+}
+
+.contribution-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 3px;
+  height: 76px;
+  margin: 7px 0 6px;
+  direction: ltr;
+}
+
+.code-map .contribution-cell,
+.contribution-legend i {
+  position: static;
+  display: block;
+  min-width: 0;
+  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  border-radius: 2px;
+  background: var(--heat-0);
+  opacity: 1;
+}
+
+.code-map .contribution-cell[data-level='1'],
+.contribution-legend i[data-level='1'] { background: var(--heat-1); }
+.code-map .contribution-cell[data-level='2'],
+.contribution-legend i[data-level='2'] { background: var(--heat-2); }
+.code-map .contribution-cell[data-level='3'],
+.contribution-legend i[data-level='3'] { background: var(--heat-3); }
+.code-map .contribution-cell[data-level='4'],
+.contribution-legend i[data-level='4'] { background: var(--heat-4); }
+
+.contribution-legend {
+  justify-content: flex-end;
+  gap: 3px;
+}
+
+.contribution-legend i {
+  width: 8px;
+  height: 8px;
+}
+
+html.locale-switching body {
+  opacity: .72;
+}
+
+body {
+  transition: opacity .12s ease;
+}
+
 @media (max-width: 900px) {
   .contact-card {
     grid-template-columns: 1fr;
@@ -192,6 +424,15 @@ html[dir='rtl'] .contact-channel:hover .contact-channel-arrow {
     border-radius: 12px;
   }
 
+  .language-trigger {
+    min-width: 68px;
+    padding-inline: 8px;
+  }
+
+  .language-dropdown {
+    width: 164px;
+  }
+
   .contact-primary-actions .button {
     width: 100%;
   }
@@ -203,6 +444,16 @@ html[dir='rtl'] .contact-channel:hover .contact-channel-arrow {
   .contact-channel {
     min-height: 72px;
   }
+
+  .code-map {
+    inset-inline: 16px;
+    height: 124px;
+  }
+
+  .contribution-grid {
+    gap: 2px;
+    height: 70px;
+  }
 }
 
 @media (max-width: 430px) {
@@ -213,5 +464,19 @@ html[dir='rtl'] .contact-channel:hover .contact-channel-arrow {
   .footer-brand > img {
     width: 38px;
     height: 38px;
+  }
+
+  .language-trigger {
+    min-width: 61px;
+    gap: 5px;
+  }
+
+  .language-trigger > svg:first-child {
+    width: 15px;
+    height: 15px;
+  }
+
+  .language-chevron {
+    display: none;
   }
 }
