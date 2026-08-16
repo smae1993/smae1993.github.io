@@ -20,6 +20,7 @@ void main() {
       head: const [
         RawText('<link rel="stylesheet" href="/styles/global.css">'),
         RawText('<link rel="stylesheet" href="/styles/overrides.css">'),
+        RawText('<link rel="stylesheet" href="/styles/heatmap.css">'),
         RawText('<link rel="icon" type="image/svg+xml" href="/amin-logo.svg">'),
         RawText('<link rel="manifest" href="/manifest.webmanifest">'),
         RawText('<script src="/site.js" defer></script>'),
