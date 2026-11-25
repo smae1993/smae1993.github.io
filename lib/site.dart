@@ -52,8 +52,8 @@ class PortfolioPage extends StatelessComponent {
       'url': 'https://smae1993.github.io',
       'image': 'https://smae1993.github.io/amin-logo.svg',
       'email': 'mailto:smae1993@gmail.com',
-      'jobTitle': 'Full-stack Software Engineer',
-      'knowsAbout': ['Flutter', 'Jaspr', 'Dart', 'Go', 'DevOps', 'IoT', 'System Design'],
+      'jobTitle': 'Go (Golang) Backend Developer',
+      'knowsAbout': ['Go', 'Golang', 'Backend Development', 'REST APIs', 'PostgreSQL', 'Docker', 'Linux', 'System Design'],
       'sameAs': [
         'https://github.com/smae1993',
         'https://www.linkedin.com/in/smae1993/',
@@ -160,7 +160,7 @@ String _renderPage(PortfolioCopy copy) {
   out.write('''
             <div class="terminal-cursor"></div>
           </div>
-          <div class="code-map" aria-hidden="true"><span style="--x:8%;--y:18%;--s:1.05">FLUTTER</span><span style="--x:62%;--y:16%;--s:.9">JASPR</span><span style="--x:20%;--y:71%;--s:.9">DART</span><span style="--x:69%;--y:70%;--s:.95">GO</span><span style="--x:43%;--y:43%;--s:1.4">{ }</span></div>
+          <div class="code-map" aria-hidden="true"><span style="--x:8%;--y:18%;--s:1.05">GO</span><span style="--x:62%;--y:16%;--s:.9">SQL</span><span style="--x:20%;--y:71%;--s:.9">DOCKER</span><span style="--x:69%;--y:70%;--s:.95">API</span><span style="--x:43%;--y:43%;--s:1.4">{ }</span></div>
         </div>
       </div>
     </div>
@@ -182,7 +182,7 @@ String _renderPage(PortfolioCopy copy) {
     out.write('<p>${_e(paragraph)}</p>');
   }
   out.write('''
-          <div class="signature" dir="ltr"><span>S. M. Amin Emrani</span><small>Engineer · Builder · Problem Solver</small></div>
+          <div class="signature" dir="ltr"><span>S. M. Amin Emrani</span><small>Go Developer · Backend Engineer</small></div>
         </div>
         <div class="about-cards">
 ''');
@@ -272,7 +272,7 @@ String _renderPage(PortfolioCopy copy) {
           <h2>${_e(copy.contactTitle)}</h2>
           <p>${_e(copy.contactText)}</p>
           <div class="contact-primary-actions">
-            <a class="button button-light" href="mailto:smae1993@gmail.com?subject=Project%20inquiry%20from%20portfolio">${_e(copy.contactPrimary)}<svg viewBox="0 0 24 24"><path d="${isFa ? 'm8 5-7 7 7 7M1 12h22' : 'm16 5 7 7-7 7M23 12H1'}"></path></svg></a>
+            <a class="button button-light" href="mailto:smae1993@gmail.com?subject=Go%20backend%20opportunity">${_e(copy.contactPrimary)}<svg viewBox="0 0 24 24"><path d="${isFa ? 'm8 5-7 7 7 7M1 12h22' : 'm16 5 7 7-7 7M23 12H1'}"></path></svg></a>
             <button class="button button-outline-light" type="button" data-copy-email data-default="${_e(copy.copyEmail)}" data-copied="${_e(copy.copiedEmail)}">${_e(copy.copyEmail)}</button>
           </div>
           <p class="contact-response-note">${_e(copy.responseNote)}</p>

@@ -9,9 +9,9 @@ void main() {
 
   runApp(
     Document(
-      title: 'Sayed Mohammad Amin Emrani | Full-stack Software Engineer',
+      title: 'Sayed Mohammad Amin Emrani | Go (Golang) Backend Developer',
       meta: const {
-        'description': 'Portfolio of Sayed Mohammad Amin Emrani, a full-stack engineer building Flutter, Jaspr, Dart, Go, SaaS, DevOps, and IoT products.',
+        'description': 'Portfolio of Sayed Mohammad Amin Emrani, a Go (Golang) backend developer focused on APIs, software architecture, databases, and infrastructure.',
         'author': 'Sayed Mohammad Amin Emrani',
         'theme-color': '#173e64',
         'color-scheme': 'dark light',

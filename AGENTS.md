@@ -2,7 +2,7 @@
 
 ## Project goal
 
-Maintain a high-performance bilingual personal portfolio for Sayed Mohammad Amin Emrani. The site should feel like the portfolio of a senior product-minded engineer, not a generic template.
+Maintain a high-performance bilingual personal portfolio for Sayed Mohammad Amin Emrani. The site should present a Go-focused backend developer with broad software engineering experience, not a generic template.
 
 ## Technical constraints
 
@@ -16,7 +16,7 @@ Maintain a high-performance bilingual personal portfolio for Sayed Mohammad Amin
 ## Content rules
 
 - Shared localized content lives in `lib/site_data.dart`.
-- Toolkit priority must keep Flutter, Jaspr, and Dart prominent unless the owner explicitly changes it.
+- Toolkit priority must keep Go, backend engineering, databases, and infrastructure prominent. Flutter, Jaspr, and Dart remain complementary skills.
 - Never publish private repository links or confidential implementation details.
 - Do not invent employment history, client names, metrics, dates, or project outcomes.
 - Keep Persian and English versions semantically aligned.

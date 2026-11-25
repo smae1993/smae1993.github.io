@@ -1,13 +1,13 @@
 # Amin Portfolio
 
-پورتفولیوی شخصی دو‌زبانه سید محمد امین عمرانی با **Dart + Jaspr** و خروجی کاملاً استاتیک برای GitHub Pages.
+پورتفولیوی شخصی دو‌زبانه سید محمد امین عمرانی، توسعه‌دهنده Go و مهندس بک‌اند با **Dart + Jaspr** و خروجی کاملاً استاتیک برای GitHub Pages.
 
 ## قابلیت‌ها
 
 - طراحی اختصاصی Dark/Light با همان ظاهر نسخه قبلی
 - زبان پیش‌فرض انگلیسی در مسیر `/`
 - نسخه فارسی RTL در مسیر `/fa/`
-- اولویت Toolkit: **Flutter → Jaspr → Dart**
+- اولویت Toolkit: **Go → Backend → Data & Infrastructure**
 - Command Palette با `Ctrl/⌘ + K`
 - انیمیشن‌های سبک و پشتیبانی از `prefers-reduced-motion`
 - SEO، Open Graph، JSON-LD و sitemap
@@ -52,7 +52,7 @@ web/
 
 ## تکنولوژی
 
-- Flutter — تکنولوژی اصلی اپلیکیشن‌ها
+- Go — محور تخصص حرفه‌ای معرفی‌شده در پورتفولیو (نه زبان پیاده‌سازی سایت)
 - Jaspr 0.23.x — وب و Static Site Generation
 - Dart
 - CSS خالص
